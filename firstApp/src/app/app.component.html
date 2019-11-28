@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>
+                we are here now
+            </h3>
+            <hr>
+            <!--<div app-servers></div>-->
+            <!--<app-servers> loading... </app-servers>-->
+            <button (click)="onToggleDetails()">
+                Add to log
+            </button>
+            <div *ngFor="let logItem of log; let i = index"
+                [ngStyle] = "{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+                [ngClass] = "{'white-text': i >= 4}"
+                 (click) = "onRemoveServer(i)"
+            >{{ logItem }}</div>
+        </div>
+    </div>
+
+</div>
