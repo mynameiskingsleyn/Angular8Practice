@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [];
+  canSee = true;
+  oddNumbers = [1,3 ,5];
+  evenNumber = [2, 3];
+  onlyOdd = false;
+  value = 10;
+
+  ngOnInit(){
+      this.canSee = true;
+  }
 
   onServerAdded(serverData: {serverName: string, serverContent: string}){
      this.serverElements.push({
