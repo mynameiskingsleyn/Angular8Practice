@@ -28,6 +28,16 @@ export class RecipeService {
         return this.recipes.slice();
     }
 
+    getRecipe(index: number){
+        //console.log(this.recipes[index]);
+        let oneRecipe = this.recipes[index];
+        if(oneRecipe){
+            return this.recipes[index];
+        }
+        return this.recipes[0];
+
+    }
+
     addIngredientsToShoppingList(ingredients :Ingredient[]){
         console.log(ingredients);
         this.slService.addIngredients(ingredients)
